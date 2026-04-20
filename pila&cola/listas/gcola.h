@@ -1,7 +1,7 @@
 #ifndef __GCOLA_H__
 #define __GCOLA_H__
 
-#include "gdlist.h"
+#include "../../listas/implementacion/gdlist.h"
 
 typedef GDList GCola;
 

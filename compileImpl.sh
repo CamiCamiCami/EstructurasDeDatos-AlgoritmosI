@@ -1,0 +1,1 @@
+gcc -c listas/implementacion/glist.c -o implementaciones/glist.o

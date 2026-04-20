@@ -23,8 +23,8 @@ void gpila_push(GPila pila, void *dato) {
     if(pila->ultimo >= arreglo_capacidad(pila->arreglo)) {
         gpila_expand(pila);
     }
-    arreglo_escribir(pila->arreglo, pila->ultimo, dato, no_copia);
     pila->ultimo++;
+    arreglo_escribir(pila->arreglo, pila->ultimo, dato, no_copia);
 }
 
 void gpila_expand(GPila pila) {

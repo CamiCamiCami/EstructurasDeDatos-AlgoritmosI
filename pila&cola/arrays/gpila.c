@@ -9,7 +9,12 @@ void* no_copia(void *dato)  {
 }
 
 void no_destruye(void *dato) {
+    dato = dato;
     return;
+}
+
+void gpila_expand(GPila pila) {
+    pila->arreglo = arreglo_redimensionar(pila->arreglo, arreglo_capacidad(pila->arreglo) + LARGO_ALARGUE);
 }
 
 GPila gpila_crear() {
@@ -25,10 +30,6 @@ void gpila_push(GPila pila, void *dato) {
     }
     pila->ultimo++;
     arreglo_escribir(pila->arreglo, pila->ultimo, dato, no_copia);
-}
-
-void gpila_expand(GPila pila) {
-    pila->arreglo = arreglo_redimensionar(pila->arreglo, arreglo_capacidad(pila->arreglo) + LARGO_ALARGUE);
 }
 
 void gpila_pop(GPila pila) {

@@ -13,7 +13,7 @@ GArreglo arreglo_crear(int capacidad) {
 void arreglo_destruir(GArreglo arreglo, FuncionDestructora destruir) {
     for (int i = 0; i < arreglo.capacidad; i++)
         destruir(arreglo.direccion[i]);
-    free(arreglo.capacidad);
+    free(arreglo.direccion);
 }
 
 void* arreglo_leer(GArreglo arreglo, int pos) {
@@ -36,4 +36,5 @@ void arreglo_recorrer(GArreglo arreglo, FuncionVisitante visitar) {
 GArreglo arreglo_redimensionar(GArreglo arreglo, int capacidad) {
     arreglo.direccion = realloc(arreglo.direccion, capacidad);
     arreglo.capacidad = capacidad;
+    return arreglo;
 }

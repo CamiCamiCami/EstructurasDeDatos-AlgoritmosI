@@ -144,3 +144,32 @@ void ABB_imprimir_in(ABBNodo* nodo, FuncionImpresora imprime, int indentacion) {
 void ABB_imprimir(ABB arbol, FuncionImpresora imprime) {
     ABB_imprimir_in(arbol.raiz, imprime, 0);
 }
+
+
+void* ABBMenorSuperaKIn(ABBNodo* arbol, void* k, FuncionComparadora compara) {
+    if(arbol == NULL) {
+        return NULL;
+    }
+    int dif = compara(arbol->dato, k);
+    if(dif > 0) {
+        void* menor = ABBMenorSuperaKIn(arbol->izq, k, compara);
+        return menor ? menor : arbol->dato;
+    } else {
+        return ABBMenorSuperaKIn(arbol->der, k, compara);
+    }
+}
+
+void* ABBMenorSuperaK(ABB arbol, void* k) {
+    return ABBMenorSuperaKIn(arbol.raiz, k, arbol.compara);
+}
+
+
+void* ABB_menor_in(ABBNodo* arbol) {
+    if(arbol == NULL) return NULL;
+    if(arbol->izq == NULL) return arbol->dato;
+    return ABB_menor_in(arbol->izq);
+}
+
+void* ABB_menor(ABB arbol) {
+    return ABB_menor_in(arbol.raiz);
+}

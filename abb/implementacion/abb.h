@@ -34,5 +34,7 @@ void ABB_destruir(ABB arbol);
 
 void ABB_imprimir(ABB arbol, FuncionImpresora imprime);
 
+void* ABB_menor(ABB arbol);
+
 
 #endif

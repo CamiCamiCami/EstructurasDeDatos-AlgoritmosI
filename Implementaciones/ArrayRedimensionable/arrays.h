@@ -1,5 +1,5 @@
-#ifndef __ARRAYS_H__
-#define __ARRAYS_H__
+#ifndef __REDIMENSIONABLE_H__
+#define __REDIMENSIONABLE_H__
 
 #include <stdlib.h>
 #include <stdio.h>

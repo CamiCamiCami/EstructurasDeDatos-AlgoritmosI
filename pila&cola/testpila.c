@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "listas/gpila.h"
+#include "../Implementaciones/ColaLista/gcola.h"
 
 // Función auxiliar para crear enteros en el heap
 int *crear_entero(int n)

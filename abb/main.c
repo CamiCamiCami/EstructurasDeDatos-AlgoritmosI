@@ -1,4 +1,4 @@
-#include "implementacion/abb.h"
+#include "../Implementaciones/ArbolBinarioBusqueda/abb.h"
 #include <stdlib.h>
 #include <stdio.h>
 

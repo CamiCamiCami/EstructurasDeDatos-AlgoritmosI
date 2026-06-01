@@ -1,14 +1,9 @@
 #ifndef __GCOLA_H__
 #define __GCOLA_H__
 
-#include "arrays.h"
+#include "../ListaDoble/gdlist.h"
 
-
-typedef struct __gcola {
-    GArreglo arreglo;
-    int primero, ultimo;
-    int largo;
-} *GCola;
+typedef GDList GCola;
 
 
 GCola gcola_crear();

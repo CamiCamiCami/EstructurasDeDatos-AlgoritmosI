@@ -1,5 +1,5 @@
-#include "implementacion/abb.h"
-#include "implementacion/abbaux.h"
+#include "../Implementaciones/ArbolBinarioBusqueda/abb.h"
+#include "../Implementaciones/ArbolBinarioBusqueda/abbaux.h"
 #include <stdio.h>
 
 int* copiaInt(int* dato) {

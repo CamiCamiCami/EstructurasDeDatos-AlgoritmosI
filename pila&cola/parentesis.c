@@ -1,4 +1,4 @@
-#include "arrays/gpila.h"
+#include "../Implementaciones/PilaArray/gpila.h"
 #include "cuenta.h"
 
 

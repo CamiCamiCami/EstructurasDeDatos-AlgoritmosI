@@ -1,7 +1,7 @@
 #ifndef __GPILA_H__
 #define __GPILA_H__
 
-#include "arrays.h"
+#include "../ArrayDinamico/arrays.h"
 
 typedef struct __gpila {
     GArreglo arreglo;

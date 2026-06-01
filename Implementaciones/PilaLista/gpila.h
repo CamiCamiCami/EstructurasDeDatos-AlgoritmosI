@@ -1,7 +1,7 @@
 #ifndef __GPILA_H__
 #define __GPILA_H__
 
-#include "../../listas/implementacion/glist.h"
+#include "../Lista/glist.h"
 
 typedef GList GPila;
 

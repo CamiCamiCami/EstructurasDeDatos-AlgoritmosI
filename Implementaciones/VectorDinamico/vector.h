@@ -4,28 +4,27 @@
 typedef void (*FuncionDestructora)(void *dato);
 typedef void *(*FuncionCopia)(void *dato);
 typedef void (*FuncionVisitante)(void *dato);
-typedef void (*FuncionImpresora)(void*);
-
+typedef void (*FuncionImpresora)(void *);
 
 typedef struct {
-    void* *arr;
-    int capacidad;
-    int posInsertar;
-    FuncionDestructora destruir;
-    FuncionCopia copiar;
+  void **arr;
+  int capacidad;
+  int posInsertar;
+  FuncionDestructora destruir;
+  FuncionCopia copiar;
 } GVector;
 
 GVector vector_crear(FuncionDestructora, FuncionCopia);
 
 void vector_destruir(GVector);
 
-void* vector_leer(GVector, int);
+void *vector_leer(GVector, int);
 
-void* vector_ultimo(GVector);
+void *vector_ultimo(GVector);
 
 GVector vector_eliminar(GVector, int);
 
-GVector vector_escribir(GVector, int, void*);
+GVector vector_escribir(GVector, int, void *);
 
 int vector_capacidad(GVector);
 
@@ -37,6 +36,8 @@ void vector_imprimir(GVector, FuncionImpresora);
 
 GVector vector_redimensionar(GVector, int);
 
-GVector vector_meter(GVector, void*);
+GVector vector_meter(GVector, void *);
+
+GVector vector_eliminar_ultimo(GVector);
 
 #endif

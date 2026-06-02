@@ -6,10 +6,9 @@
 typedef int (*FuncionComparadora)(void*, void*);
 
 typedef struct {
-    GVector vector;
-    FuncionComparadora compara;
+  GVector vector;
+  FuncionComparadora compara;
 } Heap;
-
 
 Heap heap_crear(FuncionComparadora, FuncionCopia, FuncionDestructora);
 
@@ -26,10 +25,5 @@ void heap_destruir(Heap);
 void heap_recorrer(Heap, FuncionVisitante);
 
 void heap_imprimir(Heap, FuncionImpresora);
-
-
-
-
-
 
 #endif
